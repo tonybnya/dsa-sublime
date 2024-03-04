@@ -1,3 +1,3 @@
 # dsa-sublime
 
-Some DSA & Leetcode solutions
+Some DSA & Leetcode solutions.
