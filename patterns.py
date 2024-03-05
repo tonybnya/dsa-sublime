@@ -56,6 +56,7 @@ def pattern01(n: int) -> None:
 			print('*', end='')
 		print()
 
+
 def pattern02(n: int) -> None:
 	"""
 	1
@@ -70,6 +71,22 @@ def pattern02(n: int) -> None:
 		for j in range(i + 1):
 			print(j + 1, end='')
 		print()
+
+
+def pattern03(n: int) -> None:
+	"""
+	1
+  	22
+  	333
+  	4444
+  	55555
+
+	:param n: integer as input (number of rows)
+ 	"""
+	for i in range(n):
+		for j in range(i + 1):
+			print(i + 1, end='')
+		print()
 	
 
 if __name__ == '__main__':
@@ -79,5 +96,5 @@ if __name__ == '__main__':
 	with open('input.txt') as file:
 		for item in file.readlines():
 			n = int(item.strip())
-			pattern02(n)
+			pattern03(n)
 			print()
