@@ -167,6 +167,48 @@ def pattern07(n: int) -> None:
 			print(' ', end='')
 
 		print()
+
+
+def pattern08(n: int) -> None:
+	"""
+	    *
+	   ***
+	  *****
+	 *******
+	*********
+	*********
+	 *******
+	  *****
+	   ***
+	    *
+
+	:param n: integer as input (number of rows)
+ 	"""
+	for i in range(n):
+		# spaces
+		for j in range(n - i - 1):
+			print(' ', end='')
+		# stars
+		for j in range(2 * i + 1):
+			print('*', end='')
+		# spaces
+		for j in range(n - i - 1):
+			print(' ', end='')
+
+		print()
+
+	for i in range(n):
+		# spaces
+		for j in range(i):
+			print(' ', end='')
+		# stars
+		for j in range(2 * (n - i) - 1):
+			print('*', end='')
+		# spaces
+		for j in range(i):
+			print(' ', end='')
+
+		print()
 	
 
 if __name__ == '__main__':
@@ -176,5 +218,5 @@ if __name__ == '__main__':
 	with open('input.txt') as file:
 		for item in file.readlines():
 			n = int(item.strip())
-			pattern07(n)
+			pattern08(n)
 			print()
