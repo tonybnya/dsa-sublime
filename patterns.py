@@ -55,8 +55,29 @@ def pattern01(n: int) -> None:
 		for j in range(i + 1):
 			print('*', end='')
 		print()
+
+def pattern02(n: int) -> None:
+	"""
+	1
+  	12
+  	123
+  	1234
+  	12345
+
+	:param n: integer as input (number of rows)
+ 	"""
+	for i in range(n):
+		for j in range(i + 1):
+			print(j + 1, end='')
+		print()
 	
 
 if __name__ == '__main__':
-	n = int(input())
-	pattern00(n)
+	# n = list(map(int, input().strip().split(' ')))
+	# print(n)
+	# pattern01(n)
+	with open('input.txt') as file:
+		for item in file.readlines():
+			n = int(item.strip())
+			pattern02(n)
+			print()
