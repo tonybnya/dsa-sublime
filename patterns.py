@@ -103,6 +103,22 @@ def pattern04(n: int) -> None:
 		for j in range(n - i):
 			print('*', end='')
 		print()
+
+
+def pattern05(n: int) -> None:
+	"""
+  	12345
+  	1234
+  	123
+  	12
+	1
+
+	:param n: integer as input (number of rows)
+ 	"""
+	for i in range(n):
+		for j in range(n - i):
+			print(j + 1, end='')
+		print()
 	
 
 if __name__ == '__main__':
@@ -112,5 +128,5 @@ if __name__ == '__main__':
 	with open('input.txt') as file:
 		for item in file.readlines():
 			n = int(item.strip())
-			pattern04(n)
+			pattern05(n)
 			print()
