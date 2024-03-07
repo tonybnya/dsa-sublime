@@ -236,6 +236,24 @@ def pattern09(n: int) -> None:
 			print()
 
 
+def pattern10(n: int) -> None:
+	"""
+	1
+	01
+	101
+	0101
+	10101
+
+	:param n: integer as input (number of rows)
+	"""
+	for i in range(n):
+		num = 1 if i % 2 == 0 else 0
+		for j in range(i + 1):
+			print(num, end='')
+			num = 0 if num == 1 else 1
+		print()
+
+
 if __name__ == '__main__':
 	# n = list(map(int, input().strip().split(' ')))
 	# print(n)
@@ -243,5 +261,5 @@ if __name__ == '__main__':
 	with open('input.txt') as file:
 		for item in file.readlines():
 			n = int(item.strip())
-			pattern09(n)
+			pattern10(n)
 			print()
