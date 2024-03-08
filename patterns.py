@@ -339,6 +339,33 @@ def pattern15(n: int) -> None:
 		print()
 
 
+def pattern16(n: int) -> None:
+	"""
+	    A
+	   ABA
+	  ABCBA
+	 ABCDCBA
+	ABCDEDCBA
+	"""
+	for i in range(n):
+		# spaces
+		for j in range(n - i - 1):
+			print(' ', end='')
+		# chars
+		for j in range(2 * i + 1):
+			code = 65
+			if j <= i:
+				asc = code + j
+				print(chr(asc), end='')
+			else:
+				asc -= 1
+				print(chr(asc), end='')
+		# spaces
+		for j in range(n - i - 1):
+			print(' ', end='')
+		print()
+
+
 if __name__ == '__main__':
 	# n = list(map(int, input().strip().split(' ')))
 	# print(n)
@@ -346,5 +373,5 @@ if __name__ == '__main__':
 	with open('input.txt') as file:
 		for item in file.readlines():
 			n = int(item.strip())
-			pattern15(n)
+			pattern16(n)
 			print()

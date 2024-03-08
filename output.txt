@@ -1,18 +1,18 @@
-A
-BB
-CCC
+  A  
+ ABA 
+ABCBA
 
-A
-BB
-CCC
-DDDD
-EEEEE
+    A    
+   ABA   
+  ABCBA  
+ ABCDCBA 
+ABCDEDCBA
 
-A
-BB
-CCC
-DDDD
-EEEEE
-FFFFFF
-GGGGGGG
+      A      
+     ABA     
+    ABCBA    
+   ABCDCBA   
+  ABCDEDCBA  
+ ABCDEFEDCBA 
+ABCDEFGFEDCBA
 
