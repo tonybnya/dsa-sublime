@@ -278,6 +278,22 @@ def pattern11(n: int) -> None:
 		print()
 
 
+def pattern12(n: int) -> None:
+	"""
+	1
+	2  3
+	4  5  6
+	7  8  9  10
+	11 12 13 14 15
+	"""
+	start = 1
+	for i in range(n):
+		for j in range(i + 1):
+			print(start, end='')
+			start += 1
+		print()
+
+
 if __name__ == '__main__':
 	# n = list(map(int, input().strip().split(' ')))
 	# print(n)
@@ -285,5 +301,5 @@ if __name__ == '__main__':
 	with open('input.txt') as file:
 		for item in file.readlines():
 			n = int(item.strip())
-			pattern11(n)
+			pattern12(n)
 			print()
