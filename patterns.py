@@ -294,6 +294,21 @@ def pattern12(n: int) -> None:
 		print()
 
 
+def pattern13(n: int) -> None:
+	"""
+	A
+	AB
+	ABC
+	ABCD
+	ABCDE
+	"""
+	code = 65
+	for i in range(n):
+		for j in range(i + 1):
+			print(chr(code + j), end='')
+		print()
+
+
 if __name__ == '__main__':
 	# n = list(map(int, input().strip().split(' ')))
 	# print(n)
@@ -301,5 +316,5 @@ if __name__ == '__main__':
 	with open('input.txt') as file:
 		for item in file.readlines():
 			n = int(item.strip())
-			pattern12(n)
+			pattern13(n)
 			print()
