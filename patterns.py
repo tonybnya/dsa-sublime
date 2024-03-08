@@ -254,6 +254,30 @@ def pattern10(n: int) -> None:
 		print()
 
 
+def pattern11(n: int) -> None:
+	"""
+	1      1
+	12    21
+	123  321
+	12344321
+	"""
+	for i in range(n):
+		# nums
+		start = 1
+		for j in range(i + 1):
+			print(start, end='')
+			start += 1
+		# spaces
+		for j in range((2 * n - 2) - (2 * i)):
+			print(' ', end='')
+		# nums
+		start = i + 1
+		for j in range(start):
+			print(start, end='')
+			start -= 1
+		print()
+
+
 if __name__ == '__main__':
 	# n = list(map(int, input().strip().split(' ')))
 	# print(n)
@@ -261,5 +285,5 @@ if __name__ == '__main__':
 	with open('input.txt') as file:
 		for item in file.readlines():
 			n = int(item.strip())
-			pattern10(n)
+			pattern11(n)
 			print()
